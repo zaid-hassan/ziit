@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SpotlightCard from "./components/spotlightcard/SpotlightCard";
 import CardSwap, { Card } from "./components/cardswap/CardSwap";
 import {
+  IdCard,
   LaptopMinimalCheck,
   Share2,
   TrendingUp,
@@ -111,21 +112,25 @@ function App() {
                 easing="linear"
               >
                 <Card>
-                  <h3>Card 1</h3>
-                  <p>Your content here</p>
+                  <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start"> <IdCard /> Card 1</h3>
+                  <p className="font-display text-text px-2 py-1">Your content here</p>
                 </Card>
                 <Card>
-                  <h3>Card 2</h3>
-                  <p>Your content here</p>
+                  <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start"> <IdCard /> Card 2</h3>
+                  <p className="font-display text-text px-2 py-1">Your content here</p>
                 </Card>
                 <Card>
-                  <h3>Card 3</h3>
-                  <p>Your content here</p>
+                  <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start"> <IdCard /> Card 3</h3>
+                  <p className="font-display text-text px-2 py-1">Your content here</p>
                 </Card>
               </CardSwap>
             </div>
           </motion.div>
         </div>
+      </main>
+
+      <main className="flex flex-col items-center justify-start w-full h-screen px-6 py-12 max-w-7xl mx-auto">
+        
       </main>
     </section>
   );
