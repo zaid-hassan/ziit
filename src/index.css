@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "JetBrains Mono", "Fira Code", monospace;
+
+  --breakpoint-3xl: 120rem;
+
+  /* Dark Base */
+  --color-background: oklch(0.15 0.01 270); /* Very dark blue-gray */
+  --color-surface: oklch(0.18 0.02 270);    /* Slightly lighter surface */
+  --color-card: oklch(0.22 0.02 270);       /* For cards and panels */
+
+  /* Text */
+  --color-text: oklch(0.92 0.01 270);       /* Light gray text */
+  --color-muted: oklch(0.7 0.01 270);       /* Muted gray for secondary text */
+  --color-heading: oklch(1 0 0);            /* Pure white for headings */
+
+  /* Primary + Accent Colors */
+  --color-primary: oklch(0.78 0.2 230);     /* Vibrant blue (neon-ish) */
+  --color-accent: oklch(0.82 0.2 280);      /* Electric purple */
+  --color-cta: oklch(0.85 0.18 190);        /* Bright cyan for buttons */
+
+  /* Borders */
+  --color-border: oklch(0.3 0.01 270);      /* Subtle border */
+  --color-focus: oklch(0.8 0.2 230);        /* Focus outline (same as primary) */
+
+  /* Easing */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
