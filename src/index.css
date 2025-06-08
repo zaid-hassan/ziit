@@ -15,6 +15,7 @@
   --font-weight-body: 400;
   --font-weight-bold: 600;
   --font-weight-light: 300;
+  --font-weight-black: 800;
 
   --letter-spacing-tight: -0.015em;
   --letter-spacing-wide: 0.05em;
@@ -52,4 +53,9 @@
   --color-focus: oklch(0.82 0.25 240);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.card-font {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-black);
 }

@@ -8,6 +8,7 @@ import {
   TrendingUp,
   UserRoundCheck,
 } from "lucide-react";
+import Orb from "../orb/Orb";
 const cardContent = [
   {
     title: "Industrial Training",
@@ -51,7 +52,7 @@ function Hero() {
           initial={{ filter: "blur(12px)", opacity: 0 }}
           animate={{ filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1.4, ease: [0.33, 1, 0.68, 1] }}
-          className="text-4xl md:text-6xl font-title text-heading block"
+          className="text-3xl md:text-6xl font-title text-heading block"
         >
           Join Our Industrial Training Program
         </motion.span>
@@ -79,10 +80,10 @@ function Hero() {
               >
                 <div className="flex flex-col items-center text-center p-4">
                   {card.icon}
-                  <h2 className="text-xl font-title text-text">
-                    {card.title}
-                  </h2>
-                  <p className="text-muted font-subtitle text-sm mt-2">{card.description}</p>
+                  <h2 className="text-xl font-title text-text">{card.title}</h2>
+                  <p className="text-muted font-subtitle text-sm mt-2">
+                    {card.description}
+                  </p>
                 </div>
               </SpotlightCard>
             </motion.div>
@@ -95,7 +96,7 @@ function Hero() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
         >
-          <div className="lg:hidden text-heading text-4xl w-fit font-display text-center">
+          <div className="lg:hidden text-heading text-2xl w-fit font-display text-center">
             Additional CTA
           </div>
           <div className="w-full h-full relative">
@@ -106,16 +107,77 @@ function Hero() {
               pauseOnHover={true}
               easing="linear"
             >
-              {[1, 2, 3].map((n) => (
-                <Card key={n} className="bg-card">
-                  <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
-                    <IdCard /> Card {n}
-                  </h3>
-                  <p className="font-display text-text px-2 py-1">
-                    Your content here
-                  </p>
-                </Card>
-              ))}
+              <Card className="bg-card">
+                <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
+                  <IdCard /> Zura Intelligent Industrial Training
+                </h3>
+                <div className="h-full w-full relative">
+                  <Orb
+                    hoverIntensity={0.5}
+                    rotateOnHover={true}
+                    hue={0}
+                    forceHoverState={false}
+                    className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  />
+
+                  <motion.h1
+                    className="card-font text-center text-text text-4xl px-2 py-1 transition-colors duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 select-none"
+                    initial="initial"
+                    animate="animate"
+                    whileHover="hover"
+                    variants={{
+                      initial: {
+                        opacity: 1,
+                        textShadow: "0 0 5px #f0f, 0 0 10px #f0f",
+                      },
+                      animate: {
+                        opacity: [1, 0.7, 1, 0.9, 1],
+                        textShadow: [
+                          "0 0 5px #f0f, 0 0 10px #f0f",
+                          "0 0 20px #f0f, 0 0 30px #f0f",
+                          "0 0 8px #f0f, 0 0 16px #f0f",
+                          "0 0 2px #f0f, 0 0 4px #f0f",
+                          "0 0 6px #f0f, 0 0 12px #f0f",
+                        ],
+                        transition: {
+                          duration: 2.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          times: [0, 0.2, 0.4, 0.7, 1],
+                        },
+                      },
+                      hover: {
+                        scale: 1.08,
+                        opacity: 1,
+                        color: "#00f0ff",
+                        textShadow: "0 0 16px #00f0ff, 0 0 32px #00f0ff",
+                        transition: {
+                          duration: 0.25,
+                          ease: "easeOut",
+                        },
+                      },
+                    }}
+                    >
+                    ZIIT
+                  </motion.h1>
+                </div>
+              </Card>
+              <Card className="bg-card">
+                <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
+                  <IdCard /> Card 2
+                </h3>
+                <p className="font-display text-text px-2 py-1">
+                  Your content here
+                </p>
+              </Card>
+              <Card className="bg-card">
+                <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
+                  <IdCard /> Card 3
+                </h3>
+                <p className="font-display text-text px-2 py-1">
+                  Your content here
+                </p>
+              </Card>
             </CardSwap>
           </div>
         </motion.div>
