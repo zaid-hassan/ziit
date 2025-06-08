@@ -130,7 +130,7 @@ function OurOfferings() {
         </motion.h1>
         {/* features */}
       </motion.div>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-6  container">
+      <div className="flex flex-wrap justify-center gap-6 container">
         {features.map((feature, i) => {
           const Icon = feature.icon;
 
@@ -148,17 +148,19 @@ function OurOfferings() {
             >
               <StarBorder
                 as="button"
-                className="w-full h-fit"
+                className="max-w-md"
                 color="oklch(0.83 0.24 300)"
                 speed="3s"
               >
-                <div className="flex gap-2">
-                  <Icon className="w-7 h-7 text-accent" />
-                  <h3 className="text-xl font-semibold text-heading font-title">
-                    {feature.title}
-                  </h3>
+                <div className=" h-full w-full">
+                  <div className="flex gap-2 ">
+                    <Icon className="w-7 h-7 text-accent" />
+                    <h3 className="text-xl font-semibold text-heading font-title">
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted text-sm">{feature.desc}</p>
                 </div>
-                <p className="text-muted text-sm">{feature.desc}</p>
               </StarBorder>
             </motion.div>
           );
@@ -187,7 +189,7 @@ function OurOfferings() {
           Program Structure
         </motion.h1>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {structureItems.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -196,7 +198,7 @@ function OurOfferings() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className=" relative"
+                className="w-full sm:w-[45%] md:w-[30%] max-w-[320px]"
               >
                 <GlareHover
                   glareColor="oklch(0.94 0.15 295 / 0.1)"

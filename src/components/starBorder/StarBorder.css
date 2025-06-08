@@ -32,6 +32,7 @@
 
 .inner-content {
   position: relative;
+  height: 9rem;
   border: 1px solid #222;
   background: #000;
   color: white;
