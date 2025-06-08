@@ -157,18 +157,31 @@ function Hero() {
                         },
                       },
                     }}
-                    >
+                  >
                     ZIIT
                   </motion.h1>
                 </div>
               </Card>
               <Card className="bg-card">
                 <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
-                  <IdCard /> Card 2
+                  <IdCard /> What is ZIIT?
                 </h3>
-                <p className="font-display text-text px-2 py-1">
-                  Your content here
-                </p>
+                <div className="flex h-full items-center justify-center">
+                  <motion.p
+                    whileHover={{
+                      y: [0,-20, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    }}
+                    className="font-display text-text px-2 py-1 w-[80%] text-center shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
+                  >
+                    This is not another certificate course. <br /> It’s a career
+                    launchpad.
+                  </motion.p>
+                </div>
               </Card>
               <Card className="bg-card">
                 <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
