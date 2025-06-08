@@ -19,12 +19,11 @@ function App() {
         {/* Hero Section */}
         <Hero />
 
+        {/* Our offerings */}
+        <OurOfferings />
+        
         {/* Mentors Section */}
         <Mentors />
-
-        {/* Our offerings */}
-
-        <OurOfferings />
 
         {/* Partners */}
         <Partners />
