@@ -130,7 +130,7 @@ function OurOfferings() {
         </motion.h1>
         {/* features */}
       </motion.div>
-      <div className="flex flex-wrap justify-center gap-6 container">
+      <div className="flex flex-wrap justify-center gap-6">
         {features.map((feature, i) => {
           const Icon = feature.icon;
 
@@ -144,16 +144,15 @@ function OurOfferings() {
                 ease: "easeInOut",
                 delay: i * 0.2,
               }}
-              className=""
             >
               <StarBorder
                 as="button"
-                className="max-w-md"
+                className="max-w-md h-full"
                 color="oklch(0.83 0.24 300)"
                 speed="3s"
               >
-                <div className=" h-full w-full">
-                  <div className="flex gap-2 ">
+                <div className="h-full w-full flex flex-col justify-evenly">
+                  <div className="flex gap-2">
                     <Icon className="w-7 h-7 text-accent" />
                     <h3 className="text-xl font-semibold text-heading font-title">
                       {feature.title}

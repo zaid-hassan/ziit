@@ -1,11 +1,3 @@
-.star-border-container {
-  display: inline-block;
-  padding: 1px 0;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 .border-gradient-bottom {
   position: absolute;
   width: 300%;
@@ -29,10 +21,17 @@
   animation: star-movement-top linear infinite alternate;
   z-index: 0;
 }
+.star-border-container {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1px 0;
+  flex-direction: column;
+}
 
 .inner-content {
   position: relative;
-  height: 9rem;
   border: 1px solid #222;
   background: #000;
   color: white;
@@ -41,6 +40,11 @@
   padding: 16px 26px;
   border-radius: 20px;
   z-index: 1;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @keyframes star-movement-bottom {
