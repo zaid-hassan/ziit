@@ -5,6 +5,7 @@ import Hero from "./components/hero/Hero";
 import Mentors from "./components/mentors/Mentors";
 import OurOfferings from "./components/ourOfferings/OurOfferings";
 import Partners from "./components/partners/Partners";
+import Pricing from "./components/pricing/Pricing";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
 
         {/* Our offerings */}
         <OurOfferings />
+
+        {/* Pricing */}
+        <Pricing />
         
         {/* Mentors Section */}
         <Mentors />
