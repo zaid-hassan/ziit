@@ -5,7 +5,7 @@ import {
   Map,
   Users,
   FolderKanban,
-} from "lucide-react"; // Use icons as needed
+} from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#", icon: <Home className="w-5 h-5" /> },

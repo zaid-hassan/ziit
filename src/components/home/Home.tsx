@@ -34,7 +34,7 @@ const cardContent = [
     icon: <TrendingUp color="oklch(0.83 0.24 300)" size={40} />,
   },
 ];
-function Hero() {
+function Home() {
   return (
     
       <main className="flex flex-col items-center justify-start w-full px-6 py-12 max-w-7xl mx-auto mt-11">
@@ -216,4 +216,4 @@ function Hero() {
   ); 
 }
 
-export default Hero;
+export default Home;

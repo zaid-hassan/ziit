@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import TiltedCard from "./components/tiltedCard/TiltedCard";
 import ClickSpark from "./components/clickSpark/ClickSpark";
-import Hero from "./components/hero/Hero";
+import Hero from "./components/home/Home";
 import Mentors from "./components/mentors/Mentors";
 import OurOfferings from "./components/exploreZiit/ExploreZiit";
 import Partners from "./components/partners/Partners";
 import Pricing from "./components/pricing/Pricing";
 import Navbar from "./components/navbar/Navbar";
+import { Home } from "lucide-react";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Navbar />
         </div>
         {/* Hero Section */}
-        <Hero />
+        <Home />
 
         {/* Our offerings */}
         <OurOfferings />
