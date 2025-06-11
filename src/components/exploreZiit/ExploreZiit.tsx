@@ -103,7 +103,10 @@ function ExploreZiit() {
   ];
 
   return (
-    <main id="explore-ziit" className="min-h-screen w-full flex flex-col items-center p-4 bg-background text-text mt-11">
+    <main
+      id="explore-ziit"
+      className="min-h-screen w-full flex flex-col items-center p-4 bg-background text-text mt-11"
+    >
       <motion.h1
         className="text-center mb-12 text-4xl md:text-5xl font-bold text-heading font-title"
         initial={{ opacity: 0, y: 30 }}

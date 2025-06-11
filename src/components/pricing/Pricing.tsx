@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Pricing() {
   return (
-    <div className="h-screen flex flex-col justify-start items-center">
+    <div className="min-h-fit flex flex-col justify-start items-center">
       <motion.div className="h-fit w-full">
         <motion.h1
           initial={{ opacity: 0, y: "100%" }}
@@ -21,7 +21,7 @@ function Pricing() {
         </motion.h1>
       </motion.div>
       {/* Pricing cards */}
-      <div className="flex w-full h-fit justify-center items-center overflow-hidden">
+      <div className="flex w-screen md:w-full h-fit justify-center items-center overflow-auto">
         <PricingCard />
       </div>
     </div>

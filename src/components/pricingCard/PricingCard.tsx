@@ -85,7 +85,7 @@ function PricingTable() {
         ease: "easeInOut",
         delay: 0.2,
       }}
-      className="overflow-x-auto py-10"
+      className="overflow-auto w-full py-10"
     >
       <table className="min-w-full table-auto border-collapse">
         <thead>

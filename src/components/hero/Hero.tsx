@@ -37,8 +37,8 @@ const cardContent = [
 ];
 function Hero() {
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-y-7">
-      <motion.h1
+    <div className="flex flex-col items-center justify-center w-full gap-y-7">
+      {/* <motion.h1
         className="text-center mb-12"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,11 +61,11 @@ function Hero() {
         <span className="text-xl font-subtitle text-muted block mt-2">
           Learn, Innovate, and Excel with Us!
         </span>
-      </motion.h1>
+      </motion.h1> */}
 
       <div className="flex flex-col lg:flex-row items-center w-full gap-8">
         <motion.div
-          className="w-full lg:w-1/2 h-[35rem] flex flex-col items-start gap-11 justify-center rounded-xl relative overflow-hidden"
+          className="w-full lg:w-1/2 h-fit flex flex-col items-start justify-start md:ustify-center gap-11 rounded-xl relative overflow-hidden"
           initial={{ opacity: 0, y: 40}}
           whileInView={{ opacity: 1, y: 0}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
@@ -93,20 +93,17 @@ function Hero() {
             whileHover={{ scale: 1.05, background: "oklch(0.83 0.24 300)" }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="text-background bg-cta p-4 mx-5"
+            className="text-background bg-cta p-4 mx-5 font-ui-mono"
           >
             Reserve Your Seat
           </motion.button>
         </motion.div>
         <motion.div
-          className="w-full lg:w-1/2 h-[35rem] flex flex-col md:flex-row items-center justify-center rounded-xl relative overflow-hidden"
+          className="w-full lg:w-1/2 h-[20rem] md:h-[35rem] flex flex-col md:flex-row items-center justify-center rounded-xl relative overflow-hidden"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
         >
-          <div className="lg:hidden text-heading text-2xl w-fit font-display text-center">
-            Additional CTA
-          </div>
           <div className="w-full h-full relative">
             <CardSwap
               cardDistance={60}

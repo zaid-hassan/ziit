@@ -6,12 +6,13 @@ import {
   Users,
   FolderKanban,
 } from "lucide-react";
+import { Link } from "react-router-dom"; 
 
 const navLinks = [
-  { label: "Home", href: "#", icon: <Home className="w-5 h-5" /> },
-  { label: "Explore ZIIT", href: "#explore-ziit", icon: <Map className="w-5 h-5" /> },
-  { label: "Mentors", href: "#mentors", icon: <Users className="w-5 h-5" /> },
-  { label: "Projects", href: "#projects", icon: <FolderKanban className="w-5 h-5" /> },
+  { label: "Home", to: "/#", icon: <Home className="w-5 h-5" />, isInternal: false },
+  { label: "Explore ZIIT", to: "/#explore-ziit", icon: <Map className="w-5 h-5" />, isInternal: false },
+  { label: "Mentors", to: "/#mentors", icon: <Users className="w-5 h-5" />, isInternal: false },
+  { label: "Enroll", to: "/enroll", icon: <FolderKanban className="w-5 h-5" />, isInternal: true },
 ];
 
 export default function Navbar() {
@@ -36,17 +37,31 @@ export default function Navbar() {
           onClick={() => setActiveLink(link)}
           className="relative flex flex-col items-center justify-center px-3 py-1.5 cursor-pointer"
         >
-          <a
-            href={link.href}
-            className={`flex flex-col items-center text-xs font-medium transition-colors ${
-              activeLink.label === link.label
-                ? "text-accent"
-                : "text-muted hover:text-accent-soft"
-            }`}
-          >
-            {link.icon}
-            <span className="mt-1">{link.label}</span>
-          </a>
+          {link.isInternal ? (
+            <Link
+              to={link.to}
+              className={`flex flex-col items-center text-xs font-medium transition-colors ${
+                activeLink.label === link.label
+                  ? "text-accent"
+                  : "text-muted hover:text-accent-soft"
+              }`}
+            >
+              {link.icon}
+              <span className="mt-1">{link.label}</span>
+            </Link>
+          ) : (
+            <a
+              href={link.to}
+              className={`flex flex-col items-center text-xs font-medium transition-colors ${
+                activeLink.label === link.label
+                  ? "text-accent"
+                  : "text-muted hover:text-accent-soft"
+              }`}
+            >
+              {link.icon}
+              <span className="mt-1">{link.label}</span>
+            </a>
+          )}
 
           {activeLink.label === link.label && (
             <motion.div
