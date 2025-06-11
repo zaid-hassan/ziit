@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import TiltedCard from "../tiltedCard/TiltedCard";
 function Mentors() {
   return (
-    <main className="flex flex-col items-center justify-start w-full min-h-[50svh] px-6 py-12 max-w-7xl mx-auto">
+    <main id="mentors" className="flex flex-col items-center justify-start mt-11 w-full min-h-[50svh] px-6 py-12 max-w-7xl mx-auto">
           <motion.h1
             className="text-center mb-12 text-4xl font-title text-heading"
             initial={{ opacity: 0, y: 30 }}

@@ -19,7 +19,7 @@ import {
 import StarBorder from "../starBorder/StarBorder";
 import GlareHover from "../glareHover/GlareHover";
 
-function OurOfferings() {
+function ExploreZiit() {
   const features = [
     {
       title: "Live Projects with Deployment",
@@ -103,14 +103,14 @@ function OurOfferings() {
   ];
 
   return (
-    <main className="min-h-screen w-full flex flex-col items-center p-4 bg-background text-text">
+    <main id="explore-ziit" className="min-h-screen w-full flex flex-col items-center p-4 bg-background text-text mt-11">
       <motion.h1
         className="text-center mb-12 text-4xl md:text-5xl font-bold text-heading font-title"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeInOut", delay: 0.3 }}
       >
-        Our Offerings
+        Explore ZIIT
       </motion.h1>
       {/* Offerings */}
       <motion.div className="h-full w-full overflow-hidden">
@@ -230,4 +230,4 @@ function OurOfferings() {
   );
 }
 
-export default OurOfferings;
+export default ExploreZiit;

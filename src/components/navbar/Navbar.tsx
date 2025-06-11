@@ -1,66 +1,62 @@
-import { CircleUser, FolderKanban, Home, Mail } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Home,
+  Map,
+  Users,
+  FolderKanban,
+} from "lucide-react"; // Use icons as needed
 
-function Navbar() {
+const navLinks = [
+  { label: "Home", href: "#", icon: <Home className="w-5 h-5" /> },
+  { label: "Explore ZIIT", href: "#explore-ziit", icon: <Map className="w-5 h-5" /> },
+  { label: "Mentors", href: "#mentors", icon: <Users className="w-5 h-5" /> },
+  { label: "Projects", href: "#projects", icon: <FolderKanban className="w-5 h-5" /> },
+];
+
+export default function Navbar() {
+  const [activeLink, setActiveLink] = useState(navLinks[0]);
+
   return (
-    <nav className="flex h-11 w-[90%] md:w-[40%] rounded-xl justify-evenly items-center gap-x-4 mx-auto bg-white/10 backdrop-blur-md transition-all duration-700 ease-in-out">
-      <NavLink
-        to="/"
-        aria-label="home"
-        className={({ isActive }) =>
-          `flex items-center transition-transform duration-300 ease-in-out ${
-            isActive
-              ? "text-gruv-dark-accent scale-110"
-              : "text-gruv-dark-accent-alt"
-          } hover:text-gruv-dark-accent-hover`
-        }
-      >
-        <Home className="w-6 h-6" />
-      </NavLink>
+    <nav
+      className="
+        fixed z-50 
+        w-full max-w-xs md:max-w-xl mx-auto
+        flex justify-evenly items-center
+        bg-card/20 backdrop-blur-lg rounded-xl shadow-md
+        transition-all duration-500 ease-in-out
 
-      <NavLink
-        to="/about"
-        aria-label="about"
-        className={({ isActive }) =>
-          `flex items-center transition-transform duration-300 ease-in-out ${
-            isActive
-              ? "text-gruv-dark-accent scale-110"
-              : "text-gruv-dark-accent-alt"
-          } hover:text-gruv-dark-accent-hover`
-        }
-      >
-        <CircleUser className="w-6 h-6" />
-      </NavLink>
+        bottom-2 md:top-4 md:bottom-auto
+        left-1/2 -translate-x-1/2 px-2 py-2
+      "
+    >
+      {navLinks.map((link) => (
+        <div
+          key={link.label}
+          onClick={() => setActiveLink(link)}
+          className="relative flex flex-col items-center justify-center px-3 py-1.5 cursor-pointer"
+        >
+          <a
+            href={link.href}
+            className={`flex flex-col items-center text-xs font-medium transition-colors ${
+              activeLink.label === link.label
+                ? "text-accent"
+                : "text-muted hover:text-accent-soft"
+            }`}
+          >
+            {link.icon}
+            <span className="mt-1">{link.label}</span>
+          </a>
 
-      <NavLink
-        to="/contact"
-        aria-label="contact"
-        className={({ isActive }) =>
-          `flex items-center transition-transform duration-300 ease-in-out ${
-            isActive
-              ? "text-gruv-dark-accent scale-110"
-              : "text-gruv-dark-accent-alt"
-          } hover:text-gruv-dark-accent-hover`
-        }
-      >
-        <Mail className="w-6 h-6" />
-      </NavLink>
-
-      <NavLink
-        to="/projects"
-        aria-label="projects"
-        className={({ isActive }) =>
-          `flex items-center transition-transform duration-300 ease-in-out ${
-            isActive
-              ? "text-gruv-dark-accent scale-110"
-              : "text-gruv-dark-accent-alt"
-          } hover:text-gruv-dark-accent-hover`
-        }
-      >
-        <FolderKanban className="w-6 h-6" />
-      </NavLink>
+          {activeLink.label === link.label && (
+            <motion.div
+              layoutId="nav-underline"
+              className="absolute bottom-0 left-0 right-0 h-[2px] bg-accent rounded-full md:top-full md:bottom-auto"
+              transition={{ type: "spring", stiffness: 500, damping: 30 }}
+            />
+          )}
+        </div>
+      ))}
     </nav>
   );
 }
-
-export default Navbar;

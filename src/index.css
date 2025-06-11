@@ -59,3 +59,7 @@
   font-family: var(--font-display);
   font-weight: var(--font-weight-black);
 }
+
+html {
+  scroll-behavior: smooth;
+}
