@@ -114,7 +114,7 @@ function Hero() {
             >
               <Card className="bg-card">
                 <h3 className="border-border border-b-1 p-1 text-muted font-display flex gap-x-2 items-center justify-start">
-                  <IdCard /> Zura Intelligent Industrial Training
+                  <IdCard /> Zura integrated Industrial Training
                 </h3>
                 <div className="h-full w-full relative">
                   <Orb
