@@ -2,13 +2,13 @@
 
 @theme {
   /* Typography Fonts */
-  --font-display: "JetBrains Mono", "Fira Code", monospace; /* For code, labels, nav */
-  --font-sans: "Inter", "Segoe UI", "Helvetica Neue", sans-serif; /* General body text */
-  --font-serif: "Source Serif 4", "Georgia", serif; /* Formal quotes or featured posts */
-  --font-title: "Space Grotesk", "Raleway", sans-serif; /* Hero titles & major headings */
-  --font-subtitle: "Poppins", "Inter", sans-serif; /* Subtitles or section labels */
-  --font-quote: "IBM Plex Serif", serif; /* Large quotes/testimonials */
-  --font-ui-mono: "Roboto Mono", monospace; /* Small UI text, tags, tech labels */
+  --font-display: "JetBrains Mono", monospace; /* For code, labels, nav */
+--font-sans: "Work Sans", "Poppins", sans-serif; /* General body text */
+--font-mont: "Montserrat", serif; /* Formal quotes or featured posts (closest available) */
+--font-title: "Montserrat", sans-serif; /* Hero titles & major headings */
+--font-subtitle: "Poppins", "Work Sans", sans-serif; /* Subtitles or section labels */
+--font-quote: "Montserrat", serif; /* Large quotes/testimonials */
+--font-ui-mono: "JetBrains Mono", monospace; /* Small UI text, tags, tech labels */
 
   /* Weights & Styling Suggestions (Tailwind classes, not CSS vars) */
   --font-weight-heading: 700;
@@ -58,6 +58,14 @@
 .card-font {
   font-family: var(--font-display);
   font-weight: var(--font-weight-black);
+}
+.hero-font-bold {
+  font-family: var(--font-subtitle);
+  font-weight: var(--font-weight-bold);
+}
+.hero-font-medium {
+  font-family: var(--font-subtitle);
+  font-weight: var(--font-weight-body);
 }
 
 html {
