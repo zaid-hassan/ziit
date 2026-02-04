@@ -233,7 +233,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
       };
     }
     return () => clearInterval(intervalRef.current);
-  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
+  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing, config.durDrop, config.durMove, config.durReturn, config.ease, config.promoteOverlap, config.returnDelay, refs]);
 
   const isMobile = useIsMobile();
   const currentWidth = isMobile ? mobileWidth : width;
