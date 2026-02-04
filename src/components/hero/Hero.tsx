@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import Orb from "../orb/Orb";
 import GradientText from "../gradientText/GradientText";
-import { Link } from "react-router";
 const cardContent = [
   {
     title: "Industrial Training",
@@ -38,10 +37,10 @@ const cardContent = [
 function Hero() {
   return (
     <div className="flex  flex-col items-center justify-center w-full gap-y-7">
-      {/* <div className="bg-blue-200 w-11 h-full top-0  -right-5 absolute"></div> */}
-      <div className="flex  relative flex-col  lg:flex-row items-center w-full gap-8">
+      {/* <div className="bg-blue-200 w-11 h-full top-0 -right-5 absolute"></div> */}
+      <div className="flex  relative flex-col  lg:flex-row items-center w-full gap-8 pointer-events-none">
        {/* <div className="absolute top-0 -right-150 w-1/2 h-full z-10 bg-background blur-md pointer-events-none"></div> */}
-       <div className="absolute top-0 left-0 w-full h-full  z-10">
+       <div className="absolute top-0 left-0 w-full h-full  z-10 pointer-events-none">
        <div className="h-full w-full relative ">
        <div className="absolute top-0 -right-5 w-11 h-full z-20 bg-background blur-md pointer-events-none"></div>
        </div>
@@ -57,7 +56,7 @@ function Hero() {
               initial={{ filter: "blur(12px)", opacity: 0 }}
               animate={{ filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 1.4, ease: [0.33, 1, 0.68, 1] }}
-              className="text-heading text-4xl md:text-6xl font-subtitle text-left hero-font-bold"
+              className="text-heading text-4xl md:text-6xl text-left hero-font-bold"
             >
               From Beginner to Builder
             </motion.h1>
@@ -66,7 +65,7 @@ function Hero() {
               initial={{ filter: "blur(12px)"}}
               animate={{ filter: "blur(0px)"}}
               transition={{ duration: 1.4, ease: [0.33, 1, 0.68, 1] }}
-              className="text-primary text-2xl md:text-4xl font-title text-left hero-font-medium"
+              className="text-primary text-2xl md:text-4xl text-left hero-font-medium"
             >
               Learn. Build. Get Hired
             </motion.h1>

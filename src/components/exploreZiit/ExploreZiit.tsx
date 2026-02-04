@@ -108,7 +108,7 @@ function ExploreZiit() {
       className="min-h-screen w-full flex flex-col items-center p-4 bg-background text-text mt-11"
     >
       <motion.h1
-        className="text-center mb-12 text-4xl md:text-5xl font-bold text-heading font-title"
+        className="text-center mb-12 text-4xl md:text-5xl text-heading font-title"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.1, ease: "easeInOut", delay: 0.3 }}
@@ -127,7 +127,7 @@ function ExploreZiit() {
             type: "spring",
             damping: 7,
           }}
-          className="text-xl md:text-2xl text-center font-title text-accent mb-8"
+          className="text-xl md:text-2xl text-center font-subtitle text-accent mb-8"
         >
           Key Features of ZIIT
         </motion.h1>
@@ -157,11 +157,11 @@ function ExploreZiit() {
                 <div className="h-full w-full flex flex-col justify-evenly">
                   <div className="flex gap-2">
                     <Icon className="w-7 h-7 text-accent" />
-                    <h3 className="text-xl font-semibold text-heading font-title">
+                    <h3 className="text-xl text-heading font-title">
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-muted text-sm">{feature.desc}</p>
+                  <p className="text-muted text-sm font-subtitle">{feature.desc}</p>
                 </div>
               </StarBorder>
             </motion.div>
@@ -186,7 +186,7 @@ function ExploreZiit() {
             type: "spring",
             damping: 7,
           }}
-          className="text-xl md:text-2xl text-center font-title text-accent mb-8"
+          className="text-xl md:text-2xl text-center font-subtitle text-accent mb-8"
         >
           Program Structure
         </motion.h1>
@@ -213,12 +213,12 @@ function ExploreZiit() {
                 >
                   <div className="bg-card border border-border rounded-2xl p-6 shadow-md h-full w-full flex flex-col justify-between">
                     <Icon className="w-7 h-7 text-accent mb-2" />
-                    <h3 className="text-lg font-semibold text-heading font-title">
+                    <h3 className="text-lg text-heading font-title">
                       {item.title}
                     </h3>
-                    <p className="text-muted text-sm mt-1">{item.value}</p>
+                    <p className="text-muted text-sm mt-1 font-subtitle">{item.value}</p>
                     {item.note && (
-                      <p className="text-muted text-xs italic mt-1">
+                      <p className="text-muted text-xs italic mt-1 font-subtitle">
                         {item.note}
                       </p>
                     )}
